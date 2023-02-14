@@ -1,6 +1,12 @@
 import { Link } from "@remix-run/react";
 
-function ExpenseListItem({ id, title, amount }) {
+type ExpenseListItemProps = {
+  id: string;
+  title: string;
+  amount: number;
+};
+
+function ExpenseListItem({ id, title, amount }: ExpenseListItemProps) {
   function deleteExpenseItemHandler() {
     // tbd
   }

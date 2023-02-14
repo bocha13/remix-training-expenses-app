@@ -1,4 +1,11 @@
-function PricingPlan({ title, price, perks, icon }) {
+type PricingPlanProps = {
+  title: string;
+  price: number;
+  perks: string[];
+  icon: any;
+};
+
+function PricingPlan({ title, price, perks, icon }: PricingPlanProps) {
   const Icon = icon;
   return (
     <article>
@@ -15,7 +22,7 @@ function PricingPlan({ title, price, perks, icon }) {
             <li key={perk}>{perk}</li>
           ))}
         </ol>
-        <div className='actions'>
+        <div className="actions">
           <a href="/not-implemented">Learn More</a>
         </div>
       </div>
